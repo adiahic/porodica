@@ -46,14 +46,19 @@ class _MyAppState extends State<MyApp> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    'Porodica Ahic',
-                    style: TextStyle(
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 8.0,
-                    ),
-                  ),
+                  FlatButton(
+                      child: Text(
+                        'Porodica Ahic',
+                        style: TextStyle(
+                          fontSize: 35.0,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 8.0,
+                        ),
+                      ),
+                      onPressed: () {
+                        final player = AudioCache();
+                        player.play('Ahic.m4a');
+                      }),
                 ],
               ),
             ),
